@@ -2,9 +2,9 @@ import React from 'react';
 import Logo from '../Logo/Logo';
 import './Header.sass';
 
-const Header= () => {
+const Header = () => {
     return ( 
-        <header>
+        <header className="header">
             <Logo/>
         </header>
      );
