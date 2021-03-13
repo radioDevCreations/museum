@@ -7,7 +7,6 @@ const Wrapper = () => {
         <div className="wrapper">
             <Header/>
         </div>
-    
      );
 }
  

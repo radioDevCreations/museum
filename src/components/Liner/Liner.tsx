@@ -14,13 +14,20 @@ const Liner = () => {
       const context = canvas?.getContext('2d') as CanvasRenderingContext2D;
 
       context.lineWidth = 2;
-      context.strokeStyle = 'rgba(180, 180, 180, 0.2)';
+      context.strokeStyle = 'rgba(180, 180, 180, 0.01)';
 
+      context.beginPath();
       
     for (let i:number = canvas.width - part; i > 0; i -= part) 
       {
       context.moveTo(i, 0);
       context.lineTo(i,canvas.height);
+      context.stroke();
+     }
+     for (let i:number = part; i < canvas.width; i += part) 
+      {
+      context.moveTo(i,canvas.height);
+      context.lineTo(i, 0);
       context.stroke();
      }
     }, [])
