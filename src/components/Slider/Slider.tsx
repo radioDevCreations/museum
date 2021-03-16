@@ -1,5 +1,5 @@
 import React from 'react';
-import SceneBackground from '../SceneBackground/SceneBackground';
+import SVGLetter from '../SVGLetter/SVGLetter';
 import './Slider.sass';
 
 export interface SliderProps {
@@ -9,7 +9,7 @@ export interface SliderProps {
 const Slider: React.SFC<SliderProps> = ({chosenSlide}) => {
     return ( 
     <div className="slider">
-        <SceneBackground/>
+        <SVGLetter/>
     </div>
      );
 }
