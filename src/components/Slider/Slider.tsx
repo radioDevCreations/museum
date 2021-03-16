@@ -1,11 +1,16 @@
 import React from 'react';
+import SceneBackground from '../SceneBackground/SceneBackground';
 import './Slider.sass';
- 
-const Slider = () => {
+
+export interface SliderProps {
+    chosenSlide: number
+}
+
+const Slider: React.SFC<SliderProps> = ({chosenSlide}) => {
     return ( 
-        <div className="slider">
-            Slider
-        </div>
+    <div className="slider">
+        <SceneBackground/>
+    </div>
      );
 }
  

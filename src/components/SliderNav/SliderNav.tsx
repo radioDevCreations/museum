@@ -1,10 +1,13 @@
-import {useState} from 'react';
+import React from 'react';
 import './SliderNav.sass';
  
-const SliderNav = () => {
-    
-    const [chosenSlide, setChosenSlide] = useState(3);
+type ContentProps = {
+    chosenSlide: number,
+    setChosenSlide: React.Dispatch<React.SetStateAction<number>>
+}
 
+const SliderNav = ({chosenSlide, setChosenSlide}: ContentProps) => {
+    
     const choose1:string = chosenSlide===1?"":"-empty"
     const choose2:string = chosenSlide===2?"":"-empty"
     const choose3:string = chosenSlide===3?"":"-empty"
