@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&display=swap')
+
+$fontStack: Josefin Sans, sans-serif
+
+$fontColor: #000
+
+$titleFontSize: 3vh
+$subtitleFontSize: 2.6vh
+$headerFontSize: 32px
+
+$textFontSize: 18px
+$biggerTextFontSize: 20px
+
+$titleWeight: 600
+$headerWeight: 500
+$regularWeight: 400
+
+$backgroundColor: #f8f8f8
+
+body::-webkit-scrollbar
+  width: 13px
+  height: 13px
+body::-webkit-scrollbar-track
+  background-color: $backgroundColor
+body::-webkit-scrollbar-thumb
+  background-color: $fontColor
+  border-radius: 200px
+body::-webkit-scrollbar-corner
+  background-color: $backgroundColor
+body::-webkit-scrollbar-button
+  width: 13px
+  height: 13px
+  background-color: $fontColor
+  border-radius: 200px
+
+body
+  background-color: $backgroundColor
+  font: 100% $fontStack
+  color: $fontColor
+  font-weight: $regularWeight
