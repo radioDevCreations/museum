@@ -1,7 +1,6 @@
 import './Scene.sass';
 import medusaIMG from '../../img/medusa.png';
 
-
 const Scene = () => {
     return ( 
         <>
