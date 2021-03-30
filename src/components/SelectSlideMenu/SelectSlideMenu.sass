@@ -1,1 +1,32 @@
+$arrowButtonHeight: 100px
+$arrowButtonWidth: 120px
+    
 .select-slide-menu
+    position: absolute
+    margin-left: auto
+    margin-right: auto
+    top: calc(50% - 100px)
+    right: 28%
+    text-align: center
+    z-index: 3
+    font-size: 32px
+    border-left: 1px solid #888
+
+.nav-arrow-button
+    display: block
+    width: $arrowButtonWidth
+    height: $arrowButtonHeight
+    font-size: 64px
+    background-color: rgba(0, 0, 0, 0)
+    border: none
+    cursor: pointer
+    transition: all 0.3s ease-in-out
+
+.nav-arrow-button:focus
+    outline: none
+    border: none
+
+.nav-arrow-button:hover:enabled
+    -webkit-transform: scale(1.1)
+    -ms-transform: scale(1.1)
+    transform: scale(1.1)

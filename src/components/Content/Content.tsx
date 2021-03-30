@@ -9,7 +9,7 @@ const Content = () => {
 
     return ( 
         <section className="content">
-            <Slider chosenSlide={chosenSlide}/>
+            <Slider chosenSlide={chosenSlide} setChosenSlide={setChosenSlide}/>
             <SliderNav chosenSlide={chosenSlide} setChosenSlide={setChosenSlide}/>
         </section>
      );

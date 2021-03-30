@@ -1,18 +1,18 @@
 import React from 'react';
 import SVGLetter from '../SVGLetter/SVGLetter';
 import Scene from '../Scene/Scene';
+import SelectSlideMenu from '../SelectSlideMenu/SelectSlideMenu';
+import {SelectedSlide} from '../../types/SelectedSlide';
 
 import './Slider.sass';
 
-export interface SliderProps {
-    chosenSlide: number
-}
 
-const Slider: React.SFC<SliderProps> = ({chosenSlide}) => {
+const Slider = ({chosenSlide, setChosenSlide}: SelectedSlide) => {
     return ( 
     <div className="slider">
         <SVGLetter/>
         <Scene/>
+        <SelectSlideMenu chosenSlide={chosenSlide} setChosenSlide={setChosenSlide}/>
     </div>
      );
 }
