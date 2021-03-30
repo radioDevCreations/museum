@@ -1,9 +1,10 @@
+import {SelectedSlide} from '../../types/SelectedSlide';
 
-const SelectSlideMenu = () => {
+const SelectSlideMenu = ({chosenSlide, setChosenSlide}: SelectedSlide) => {
     return ( 
-        <div className="select-slide-menu">
-            select slide
-        </div>
+        <p>
+            
+        </p>
      );
 }
  

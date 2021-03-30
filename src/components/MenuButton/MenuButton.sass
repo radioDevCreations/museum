@@ -1,5 +1,8 @@
 @import "../../index.sass"
 
+$menuButtonDims: 32px
+$menuButtonIconURL: "../../img/menu32.png"
+
 .menu-button
     z-index: 2
     cursor: pointer
@@ -7,3 +10,7 @@
     right: 80px
     top: 60px
     font-size: $titleFontSize
+    background-image: url($menuButtonIconURL)
+    height: $menuButtonDims
+    width: $menuButtonDims
+    

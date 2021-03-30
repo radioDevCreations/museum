@@ -4,7 +4,7 @@ import '../../fontello/css/fontello.css'
  
 const MenuButton = () => {
     return ( 
-                <div className="menu-button"><i className="icon-menu"></i></div>
+                <div className="menu-button"></div>
     );
 }
  
