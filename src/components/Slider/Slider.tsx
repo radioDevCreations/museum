@@ -2,6 +2,7 @@ import React from 'react';
 import SVGLetter from '../SVGLetter/SVGLetter';
 import Scene from '../Scene/Scene';
 import SelectSlideMenu from '../SelectSlideMenu/SelectSlideMenu';
+import SocialMediaPanel from '../SocialMediaPanel/SocialMediaPanel';
 import {SelectedSlide} from '../../types/SelectedSlide';
 
 import './Slider.sass';
@@ -13,6 +14,7 @@ const Slider = ({chosenSlide, setChosenSlide}: SelectedSlide) => {
         <SVGLetter/>
         <Scene/>
         <SelectSlideMenu chosenSlide={chosenSlide} setChosenSlide={setChosenSlide}/>
+        <SocialMediaPanel/>
     </div>
      );
 }
