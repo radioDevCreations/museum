@@ -1,10 +1,22 @@
 import React from 'react';
 import './MenuButton.sass'
 import '../../fontello/css/fontello.css'
- 
-const MenuButton = () => {
+
+
+export interface MenuButtonProps {
+    isDroped: boolean,
+    click: () => void
+}
+
+const MenuButton: React.SFC<MenuButtonProps>  = (props) => {
+
+    const styleClass:string =
+    props.isDroped?
+    "menu-button close":
+    "menu-button open"
+
     return ( 
-                <div className="menu-button"></div>
+                <button className={styleClass} onClick = {props.click}></button>
     );
 }
  

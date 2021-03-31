@@ -2,15 +2,30 @@
 
 $menuButtonDims: 32px
 $menuButtonIconURL: "../../img/menu32.png"
+$menuButtonCloseIconURL: "../../img/close.png"
 
 .menu-button
+    background: rgba(0, 0, 0, 0)
+    border: none
     z-index: 2
     cursor: pointer
     position: fixed
     right: 80px
     top: 60px
     font-size: $titleFontSize
-    background-image: url($menuButtonIconURL)
     height: $menuButtonDims
     width: $menuButtonDims
+    transition: all 0.3s ease-in-out
+.menu-button:focus
+    outline: none
+    border: none
+.menu-button:hover
+    -webkit-transform: scale(1.05)
+    -ms-transform: rotate(1.05)
+    transform: rotate(1.05)
     
+.close
+    background-image: url($menuButtonCloseIconURL)
+
+.open
+    background-image: url($menuButtonIconURL)
