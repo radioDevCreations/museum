@@ -1,4 +1,5 @@
 import './DropDownMenu.sass';
+import {Link} from 'react-router-dom';
 
 export interface DropDownMenuProps {
     isDroped: boolean
@@ -13,9 +14,9 @@ const DropDownMenu: React.SFC<DropDownMenuProps> = (props) => {
 
     return ( 
         <ul className={stateClass}>
-            <li className="drop-down-menu-item">Home</li>
-            <li className="drop-down-menu-item">About</li>
-            <li className="drop-down-menu-item">Contact</li>
+            <li className="drop-down-menu-item"><Link className = "drop-down-menu-item-link" to="/">Home</Link></li>
+            <li className="drop-down-menu-item"><Link className = "drop-down-menu-item-link" to="/about">About</Link></li>
+            <li className="drop-down-menu-item"><Link className = "drop-down-menu-item-link" to="/contact">Contact</Link></li>
         </ul>
      );
 }
