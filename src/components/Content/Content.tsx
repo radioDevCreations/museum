@@ -4,6 +4,8 @@ import Slider from '../Slider/Slider';
 import MenuButton from '../MenuButton/MenuButton';
 import SliderNav from '../SliderNav/SliderNav';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
+import ContactForm from '../ContactForm/ContactForm';
+import AboutPage from '../AboutPage/AboutPage';
 import {Route} from 'react-router-dom';
 
 
@@ -20,12 +22,8 @@ const Content = () => {
                 <Slider chosenSlide={chosenSlide} setChosenSlide={setChosenSlide}/>
                 <SliderNav chosenSlide={chosenSlide} setChosenSlide={setChosenSlide}/>
             </Route>
-            <Route path="/about" exact>
-                About
-            </Route>
-            <Route path="/contact" exact>
-                Contact
-            </Route>
+            <Route path="/about" component={AboutPage} exact/>
+            <Route path="/contact" component={ContactForm} exact/>
         </section>
      );
 }
