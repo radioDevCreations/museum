@@ -7,9 +7,9 @@ $borderSize: 2px
 $inputHeight: (30px - (2*$borderSize))
 $inputPadding: 5px
 $summaryInputHeight: ($inputHeight + (2 * $inputPadding) + (2 * $borderSize))
-$inputBreak: 50px
+$inputBreak: 40px
 $formWidth: (800px - 2 * $formPadding)
-$formHeight: (600px - 2 * $formPadding)
+$formHeight: (700px - 2 * $formPadding)
 $smallInputWidth: (($formWidth/2) - (2*$borderSize) - (2*$inputPadding))
 $bigInputWidth: ($formWidth - (2*$borderSize) - (2*$inputPadding))
 
@@ -23,6 +23,12 @@ $bigInputWidth: ($formWidth - (2*$borderSize) - (2*$inputPadding))
     background-color: $backgroundColor
     height: $formHeight
     padding: $formPadding
+
+.form-label
+    height: 35px
+    font-size: 26px
+    margin-bottom: 30px
+    color: #fff
 
 .form-input
     position: relative
@@ -39,7 +45,8 @@ $bigInputWidth: ($formWidth - (2*$borderSize) - (2*$inputPadding))
     
 #user-name
     display: inline-block
-    width: $smallInputWidth
+    float: left
+    width: $smallInputWidth - 10px
     margin-bottom: $inputBreak
 
 #user-email
@@ -49,12 +56,33 @@ $bigInputWidth: ($formWidth - (2*$borderSize) - (2*$inputPadding))
 
 #subject
     display: inline-block
-    width: $smallInputWidth
+    float: right
+    width: $smallInputWidth - 10px
     margin-bottom: $inputBreak
 
 #message
     width: $bigInputWidth
     display: block
-    height: ($formHeight - (2*$summaryInputHeight) - (2*$inputBreak) - 20px)
+    height: ($formHeight - (2*$summaryInputHeight) - (2*$inputBreak) - 130px)
     text-align: top
     resize: none
+
+.send-message-button
+    font-size: 18px
+    color: #fff
+    float:  right
+    margin-top: $inputBreak
+    width: 200px
+    height: 40px
+    background-color: rgba(0, 0, 0, 1)
+    border: $borderSize solid $borderColor
+    transition: all .3s ease-in-out
+
+.send-message-button:focus
+    border: none
+    outline: none
+
+.send-message-button:hover
+    background-color: #fff
+    color: $borderColor
+    border: $borderSize solid $borderColor
