@@ -1,19 +1,60 @@
 @import "../../index.sass"
     
 $borderColor: #000
-$backgroundColor: #fff
+$backgroundColor: rgba(0, 0, 0, 0.8)
+$formPadding: 80px
+$borderSize: 2px
+$inputHeight: (30px - (2*$borderSize))
+$inputPadding: 5px
+$summaryInputHeight: ($inputHeight + (2 * $inputPadding) + (2 * $borderSize))
+$inputBreak: 50px
+$formWidth: (800px - 2 * $formPadding)
+$formHeight: (600px - 2 * $formPadding)
+$smallInputWidth: (($formWidth/2) - (2*$borderSize) - (2*$inputPadding))
+$bigInputWidth: ($formWidth - (2*$borderSize) - (2*$inputPadding))
 
 .contact-form
+    font: 100% $fontStack
+    border: none
+    width: $formWidth
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    background-color: $backgroundColor
+    height: $formHeight
+    padding: $formPadding
 
 .form-input
+    position: relative
+    padding: 0
+    border: $borderSize solid $borderColor
+    margin: 0
+    height: $inputHeight
+    padding: $inputPadding
+    outline: none
+
+.form-input:focus
+    outline: none
+    border: $borderSize solid $borderColor
     
 #user-name
-
+    display: inline-block
+    width: $smallInputWidth
+    margin-bottom: $inputBreak
 
 #user-email
-    width: 100%
+    display: block
+    width: $bigInputWidth
+    margin-bottom: $inputBreak
 
 #subject
+    display: inline-block
+    width: $smallInputWidth
+    margin-bottom: $inputBreak
 
 #message
-    
+    width: $bigInputWidth
+    display: block
+    height: ($formHeight - (2*$summaryInputHeight) - (2*$inputBreak) - 20px)
+    text-align: top
+    resize: none
