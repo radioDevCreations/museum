@@ -14,7 +14,7 @@ const Slider = ({chosenSlide, setChosenSlide}: SelectedSlide) => {
         <SVGLetter/>
         <Scene/>
         <SelectSlideMenu chosenSlide={chosenSlide} setChosenSlide={setChosenSlide}/>
-        <SocialMediaPanel/>
+        <SocialMediaPanel about = {false}/>
     </div>
      );
 }

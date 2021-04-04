@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Component } from "react";
 import "./ContactForm.sass";
+import SocialMediaPanel from '../SocialMediaPanel/SocialMediaPanel';
 
 export interface Props {}
 
@@ -118,6 +119,7 @@ class ContactForm extends Component<Props, State> {
   render() {
 
     return (
+      <>
       <form className="contact-form" onSubmit={this.handleSubmit} noValidate>
         <div className="form-label">Contact us!</div>
 
@@ -170,6 +172,8 @@ class ContactForm extends Component<Props, State> {
         className="send-message-button" 
         />
       </form>
+      <SocialMediaPanel about = {false}/>
+      </>
     );
   }
 }
