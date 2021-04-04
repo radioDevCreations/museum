@@ -7,7 +7,7 @@ $borderSize: 2px
 $inputHeight: (30px - (2*$borderSize))
 $inputPadding: 5px
 $summaryInputHeight: ($inputHeight + (2 * $inputPadding) + (2 * $borderSize))
-$inputBreak: 40px
+$inputBreak: 30px
 $formWidth: (800px - 2 * $formPadding)
 $formHeight: (700px - 2 * $formPadding)
 $smallInputWidth: (($formWidth/2) - (2*$borderSize) - (2*$inputPadding))
@@ -85,4 +85,18 @@ $bigInputWidth: ($formWidth - (2*$borderSize) - (2*$inputPadding))
 .send-message-button:hover
     background-color: #fff
     color: $borderColor
+    border: $borderSize solid $borderColor
+
+.error-message
+    background-color: #fff
+    color: #f22
+    height: 24px
+    position: relative
+    margin-top: $inputBreak
+    float: left
+    text-align: left
+    font-size: 18px
+    padding-left: 10px
+    padding-top: 12px
+    width: $bigInputWidth - 214px - 40px
     border: $borderSize solid $borderColor

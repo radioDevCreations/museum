@@ -9,7 +9,9 @@ export interface State {
   name: string;
   subject: string;
   message: string;
-}
+  isError: boolean,
+  errorMessage: string
+};
 
 class ContactForm extends Component<Props, State> {
   state = {
@@ -17,7 +19,16 @@ class ContactForm extends Component<Props, State> {
     name: "",
     subject: "",
     message: "",
+    isError: false,
+    errorMessage: ""
   };
+
+  errorMessages = {
+    email: "Email is incorrect",
+    name: "Name field cannot be empty",
+    subject: "Subject field cannot be empty",
+    message: "Message field cannot be empty"
+  }
 
   handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const name = e.target.name as string;
@@ -39,17 +50,75 @@ class ContactForm extends Component<Props, State> {
         });
         break;
     }
-  };
+  }
   handleWriteMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value as string;
     this.setState({
       message: value,
     });
-  };
+  }
+  handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    this.validateData();
+    if(this.state.isError)
+    {
+      console.log("Błąd")
+    }
+    else
+    {
+    console.log("Wysłano");
+    }
+  }
+  validateData = () => {
+    if(
+      this.state.email === "" ||
+      !this.state.email.includes('@') ||
+      this.state.email.lastIndexOf('@') >= this.state.email.length-1
+      )
+    {
+      this.setState({
+        isError: true,
+        errorMessage: this.errorMessages.email
+      })
+    }
+    else if(this.state.name === "")
+    {
+      this.setState({
+        isError: true,
+        errorMessage: this.errorMessages.name
+      })
+    }
+    else if(this.state.subject === "")
+    {
+      this.setState({
+        isError: true,
+        errorMessage: this.errorMessages.subject
+      })
+    }
+    else if(this.state.message === "")
+    {
+      this.setState({
+        isError: true,
+        errorMessage: this.errorMessages.message
+      })
+    }
+    else
+    {
+      this.setState({
+        email: "",
+        name: "",
+        subject: "",
+        message: "",
+        isError: false,
+        errorMessage: ""
+      })
+    }
+  }
 
   render() {
+
     return (
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={this.handleSubmit} noValidate>
         <div className="form-label">Contact us!</div>
 
         <input
@@ -91,7 +160,15 @@ class ContactForm extends Component<Props, State> {
           value={this.state.message}
         />
 
-        <input type="submit" value="Send" className="send-message-button" />
+        <div className="error-message" style = {{visibility: this.state.isError?"visible":"hidden"}}>
+            {this.state.errorMessage}
+        </div>
+
+        <input 
+        type="submit" 
+        value="Send" 
+        className="send-message-button" 
+        />
       </form>
     );
   }
