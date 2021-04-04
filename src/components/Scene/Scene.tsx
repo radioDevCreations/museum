@@ -1,7 +1,13 @@
 import './Scene.sass';
-import medusaIMG from '../../img/medusa.png';
 
-const Scene = () => {
+
+export interface SceneProps {
+    path: string;
+}
+
+const Scene: React.SFC<SceneProps> = (props) => {
+    const path = props.path;
+    console.log(path);
     return ( 
         <>
         <div className="description">
@@ -19,7 +25,7 @@ const Scene = () => {
             </button>
         </div>
         <div className="scene-img">
-            <img className="medusa-img" src={medusaIMG} alt="medusa"/>
+            <img className="medusa-img" src={path} alt="medusa"/>
         </div>
         </>
      );
