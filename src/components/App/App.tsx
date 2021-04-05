@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.sass';
 import Wrapper from '../Wrapper/Wrapper';
 import Liner from '../Liner/Liner';

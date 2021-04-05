@@ -1,5 +1,5 @@
 import {Slide} from '../../../types/Slide';
-import sculpturePNG from '../../../img/sculpture1.png';
+import sculpturePNG from '../../../img/sculpture.png';
 
 const sculpture: Slide = {
     imgPath: sculpturePNG,

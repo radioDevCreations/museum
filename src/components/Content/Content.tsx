@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import './Content.sass';
 import Slider from '../Slider/Slider';
 import MenuButton from '../MenuButton/MenuButton';

@@ -1,4 +1,3 @@
-import React from "react";
 import SVGLetter from "../SVGLetter/SVGLetter";
 import Scene from "../Scene/Scene";
 import SelectSlideMenu from "../SelectSlideMenu/SelectSlideMenu";
